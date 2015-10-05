@@ -1,0 +1,160 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="#ffff397f"
+
+             android:id="@+id/fragment_player_dialog"
+             android:orientation="vertical"
+             android:padding="10dp"
+
+             android:baselineAligned="false"
+             android:configChanges="keyboardHidden|orientation"
+             tools:context="com.example.android.spotifystreamer3.PlayerDialog"
+             android:textAlignment="center">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:weightSum="1"
+        android:layout_gravity="center">
+
+        <LinearLayout
+
+            android:id="@+id/linearLayoutTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <TextView
+                android:id="@+id/artistName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Coldplay"
+
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/albumName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="Ghost Stories"
+                android:textColor="#ff2430ff"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/mucisPlayerImage"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:adjustViewBounds="true"
+
+            android:src="@drawable/music_icon"
+            />
+
+        <TextView
+            android:id="@+id/songName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Song Name">
+
+        </TextView>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSeekBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <SeekBar
+                android:id="@+id/musicSeekBar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"></SeekBar>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutTimeDuration"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/musicCurrentLocText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                ></TextView>
+
+
+
+
+            <TextView
+                android:id="@+id/musicMaxDurationText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:gravity="right"
+                ></TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayoutplayButtons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom">
+
+            <Button
+
+                android:id="@+id/previousButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="0.2"
+                android:background="@android:drawable/ic_media_previous"
+                android:layout_marginRight="50dp" />
+
+            <ToggleButton
+                android:id="@+id/playPauseButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.2"
+                android:background="@drawable/ic_play_pause"
+                android:textOff="@null"
+                android:textOn="@null"
+                android:textSize="0sp"
+                android:layout_marginTop="5dp">
+
+            </ToggleButton>
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="10dp"
+                android:layout_weight="0.2"
+                android:background="@android:drawable/ic_media_next" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+</FrameLayout>
