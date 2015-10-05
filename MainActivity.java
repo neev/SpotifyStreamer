@@ -92,11 +92,16 @@ public class MainActivity extends AppCompatActivity implements CallBack,CallBack
         Toast.makeText(this, "landscape mode", Toast.LENGTH_SHORT).show();
 
     }
+    @Override
+    protected void onStart() {
+        super.onStart();
 
+    }
 
     public void onItemSelected(ArtistName selected_artistName) {
 
-        if(getSupportFragmentManager().findFragmentById(R.id.fragment_top_tracks) != null){
+        if(getSupportFragmentManager().findFragmentById(R.id.fragment_top_tracks) != null &&
+                getSupportFragmentManager().findFragmentById(R.id.fragment_top_tracks).isInLayout() ){
 
             Toast.makeText(this, "test mode", Toast.LENGTH_SHORT).show();
             mSelected_artistName = selected_artistName;

@@ -30,7 +30,7 @@ public class TopTracks extends AppCompatActivity implements CallBackTT {
         if(getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
             if (mTwoPane == false) {
 
-               //finish();
+               finish();
                 return;
             }
         }

@@ -17,9 +17,13 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.ShareActionProvider;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -230,10 +234,10 @@ public class PlayerDialog extends DialogFragment implements SeekBar.OnSeekBarCha
         albumNameTextBox.setText(selectedSong.getAlbumName());
         if (!selectedSong.getImageUrl().isEmpty())
             Picasso.with(getActivity()).load(selectedSong.getImageUrl()).error(R.drawable
-                    .images1).resize(540, 540).into(trackImageView);
+                    .images1).resize(640, 640).into(trackImageView);
         else {
             Picasso.with(getActivity()).load(R.drawable.music_icon).error(R.drawable.images1)
-                    .resize(540, 540).into(trackImageView);
+                    .resize(640, 640).into(trackImageView);
         }
         trackNameTextBox.setText(selectedSong.getTrackName());
 
@@ -330,10 +334,10 @@ public class PlayerDialog extends DialogFragment implements SeekBar.OnSeekBarCha
                     trackNameTextBox.setText(selectedSong.getTrackName());
                     if (!selectedSong.getImageUrl().isEmpty())
                         Picasso.with(getActivity()).load(selectedSong.getImageUrl()).error(R
-                                .drawable.images1).resize(540, 540).into(trackImageView);
+                                .drawable.images1).resize(640, 640).into(trackImageView);
                     else {
                         Picasso.with(getActivity()).load(R.drawable.music_icon).error(R.drawable
-                                .images1).resize(540, 540).into(trackImageView);
+                                .images1).resize(640, 640).into(trackImageView);
                     }
                     playAudio(selectedSong.getTrackPreviewUrl());
                     // Checked - Pause icon visible
@@ -359,10 +363,10 @@ public class PlayerDialog extends DialogFragment implements SeekBar.OnSeekBarCha
                     trackNameTextBox.setText(selectedSong.getTrackName());
                     if (!selectedSong.getImageUrl().isEmpty())
                         Picasso.with(getActivity()).load(selectedSong.getImageUrl()).error(R
-                                .drawable.images1).resize(540, 540).into(trackImageView);
+                                .drawable.images1).resize(640, 640).into(trackImageView);
                     else {
                         Picasso.with(getActivity()).load(R.drawable.music_icon).error(R.drawable
-                                .images1).resize(540, 540).into(trackImageView);
+                                .images1).resize(640, 640).into(trackImageView);
                     }
                     playAudio(selectedSong.getTrackPreviewUrl());
 
@@ -483,10 +487,10 @@ public class PlayerDialog extends DialogFragment implements SeekBar.OnSeekBarCha
             trackNameTextBox.setText(selectedSong.getTrackName());
             if (!selectedSong.getImageUrl().isEmpty())
                 Picasso.with(getActivity()).load(selectedSong.getImageUrl()).error(R.drawable
-                        .images1).resize(540, 540).into(trackImageView);
+                        .images1).resize(640, 640).into(trackImageView);
             else {
                 Picasso.with(getActivity()).load(R.drawable.music_icon).error(R.drawable.images1)
-                        .resize(540, 540).into(trackImageView);
+                        .resize(640, 640).into(trackImageView);
             }
             playAudio(selectedSong.getTrackPreviewUrl());
             // Checked - Pause icon visible
@@ -511,10 +515,10 @@ public class PlayerDialog extends DialogFragment implements SeekBar.OnSeekBarCha
             trackNameTextBox.setText(selectedSong.getTrackName());
             if (!selectedSong.getImageUrl().isEmpty())
                 Picasso.with(getActivity()).load(selectedSong.getImageUrl()).error(R
-                        .drawable.images1).resize(540, 540).into(trackImageView);
+                        .drawable.images1).resize(640, 640).into(trackImageView);
             else {
                 Picasso.with(getActivity()).load(R.drawable.music_icon).error(R.drawable
-                        .images1).resize(540, 540).into(trackImageView);
+                        .images1).resize(640, 640).into(trackImageView);
             }
             playAudio(selectedSong.getTrackPreviewUrl());
             // Checked - Pause icon visible
@@ -831,7 +835,7 @@ public class PlayerDialog extends DialogFragment implements SeekBar.OnSeekBarCha
 
 
 
-   /* @Override
+    @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         // Inflate the menu; this adds items to the action bar if it is present.
         inflater.inflate(R.menu.menu_playerdialog, menu);
@@ -871,7 +875,7 @@ public class PlayerDialog extends DialogFragment implements SeekBar.OnSeekBarCha
         shareIntent.putExtra(Intent.EXTRA_TEXT, selectedSong.getTrackPreviewUrl() + SPOTIFY_SHARE_HASHTAG);
         return shareIntent;
 
-    }*/
+    }
 
 
 
