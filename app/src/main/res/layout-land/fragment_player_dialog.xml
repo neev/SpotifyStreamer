@@ -1,4 +1,4 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
@@ -7,7 +7,8 @@
              android:id="@+id/fragment_player_dialog"
              android:orientation="vertical"
              android:padding="10dp"
-
+            android:fillViewport="true"
+            android:fadeScrollbars="false"
              android:baselineAligned="false"
              android:configChanges="keyboardHidden|orientation"
              tools:context="com.example.android.spotifystreamer3.PlayerDialog"
@@ -22,7 +23,8 @@
         android:orientation="vertical"
         android:padding="5dp"
         android:weightSum="1"
-        android:layout_gravity="center">
+        android:layout_gravity="center"
+        android:paddingTop="10dp">
 
         <LinearLayout
 
@@ -30,7 +32,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:weightSum="1">
+            android:weightSum="1"
+            android:paddingTop="10dp">
 
             <TextView
                 android:id="@+id/artistName"
@@ -39,7 +42,8 @@
                 android:gravity="center_vertical|center_horizontal"
                 android:text="Coldplay"
 
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"/>
 
             <TextView
                 android:id="@+id/albumName"
@@ -47,7 +51,6 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textview"
                 android:layout_marginBottom="5dp"
-                android:layout_marginTop="5dp"
                 android:gravity="center_vertical|center_horizontal"
                 android:text="Ghost Stories"
                 android:textColor="#ff2430ff"
@@ -57,8 +60,8 @@
 
         <ImageView
             android:id="@+id/mucisPlayerImage"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="5dp"
             android:adjustViewBounds="true"
@@ -157,4 +160,4 @@
 
 
 
-</FrameLayout>
+</ScrollView>
