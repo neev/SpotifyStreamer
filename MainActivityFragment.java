@@ -29,7 +29,6 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.android.spotifystreamer3.parcelable.ArtistName;
 import com.example.android.spotifystreamer3.parcelable.MyTrack;
@@ -359,7 +358,7 @@ public class MainActivityFragment extends Fragment {
         super.onAttach(activity);
         if(activity instanceof CallBack){
             mCallBack = (CallBack)activity;
-            Toast.makeText(getActivity(), "on Attach landscape mode", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(getActivity(), "on Attach landscape mode", Toast.LENGTH_SHORT).show();
         }
 
     }

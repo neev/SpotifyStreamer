@@ -9,7 +9,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.example.android.spotifystreamer3.parcelable.ArtistName;
 import com.example.android.spotifystreamer3.parcelable.SongParcelable;
@@ -89,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements CallBack,CallBack
 
         MainActivityFragment ff = (MainActivityFragment)getSupportFragmentManager().findFragmentById(R.id
                 .fragment_main);
-        Toast.makeText(this, "landscape mode", Toast.LENGTH_SHORT).show();
+       // Toast.makeText(this, "landscape mode", Toast.LENGTH_SHORT).show();
 
     }
     @Override
@@ -103,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements CallBack,CallBack
         if(getSupportFragmentManager().findFragmentById(R.id.fragment_top_tracks) != null &&
                 getSupportFragmentManager().findFragmentById(R.id.fragment_top_tracks).isInLayout() ){
 
-            Toast.makeText(this, "test mode", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "test mode", Toast.LENGTH_SHORT).show();
             mSelected_artistName = selected_artistName;
             // In two-pane mode, show the detail view in this activity by
             // adding or replacing the detail fragment using a

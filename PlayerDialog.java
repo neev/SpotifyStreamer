@@ -234,10 +234,10 @@ public class PlayerDialog extends DialogFragment implements SeekBar.OnSeekBarCha
         albumNameTextBox.setText(selectedSong.getAlbumName());
         if (!selectedSong.getImageUrl().isEmpty())
             Picasso.with(getActivity()).load(selectedSong.getImageUrl()).error(R.drawable
-                    .images1).resize(640, 640).into(trackImageView);
+                    .images1).resize(540, 540).into(trackImageView);
         else {
             Picasso.with(getActivity()).load(R.drawable.music_icon).error(R.drawable.images1)
-                    .resize(640, 640).into(trackImageView);
+                    .resize(540, 540).into(trackImageView);
         }
         trackNameTextBox.setText(selectedSong.getTrackName());
 
@@ -334,10 +334,10 @@ public class PlayerDialog extends DialogFragment implements SeekBar.OnSeekBarCha
                     trackNameTextBox.setText(selectedSong.getTrackName());
                     if (!selectedSong.getImageUrl().isEmpty())
                         Picasso.with(getActivity()).load(selectedSong.getImageUrl()).error(R
-                                .drawable.images1).resize(640, 640).into(trackImageView);
+                                .drawable.images1).resize(540, 540).into(trackImageView);
                     else {
                         Picasso.with(getActivity()).load(R.drawable.music_icon).error(R.drawable
-                                .images1).resize(640, 640).into(trackImageView);
+                                .images1).resize(540, 540).into(trackImageView);
                     }
                     playAudio(selectedSong.getTrackPreviewUrl());
                     // Checked - Pause icon visible
@@ -363,10 +363,10 @@ public class PlayerDialog extends DialogFragment implements SeekBar.OnSeekBarCha
                     trackNameTextBox.setText(selectedSong.getTrackName());
                     if (!selectedSong.getImageUrl().isEmpty())
                         Picasso.with(getActivity()).load(selectedSong.getImageUrl()).error(R
-                                .drawable.images1).resize(640, 640).into(trackImageView);
+                                .drawable.images1).resize(540, 540).into(trackImageView);
                     else {
                         Picasso.with(getActivity()).load(R.drawable.music_icon).error(R.drawable
-                                .images1).resize(640, 640).into(trackImageView);
+                                .images1).resize(540, 540).into(trackImageView);
                     }
                     playAudio(selectedSong.getTrackPreviewUrl());
 
@@ -487,10 +487,10 @@ public class PlayerDialog extends DialogFragment implements SeekBar.OnSeekBarCha
             trackNameTextBox.setText(selectedSong.getTrackName());
             if (!selectedSong.getImageUrl().isEmpty())
                 Picasso.with(getActivity()).load(selectedSong.getImageUrl()).error(R.drawable
-                        .images1).resize(640, 640).into(trackImageView);
+                        .images1).resize(540, 540).into(trackImageView);
             else {
                 Picasso.with(getActivity()).load(R.drawable.music_icon).error(R.drawable.images1)
-                        .resize(640, 640).into(trackImageView);
+                        .resize(540, 540).into(trackImageView);
             }
             playAudio(selectedSong.getTrackPreviewUrl());
             // Checked - Pause icon visible
@@ -515,10 +515,10 @@ public class PlayerDialog extends DialogFragment implements SeekBar.OnSeekBarCha
             trackNameTextBox.setText(selectedSong.getTrackName());
             if (!selectedSong.getImageUrl().isEmpty())
                 Picasso.with(getActivity()).load(selectedSong.getImageUrl()).error(R
-                        .drawable.images1).resize(640, 640).into(trackImageView);
+                        .drawable.images1).resize(540, 540).into(trackImageView);
             else {
                 Picasso.with(getActivity()).load(R.drawable.music_icon).error(R.drawable
-                        .images1).resize(640, 640).into(trackImageView);
+                        .images1).resize(540, 540).into(trackImageView);
             }
             playAudio(selectedSong.getTrackPreviewUrl());
             // Checked - Pause icon visible
